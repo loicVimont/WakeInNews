@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, MainActivity!</string>
+    <string name="app_name">WakeInNews</string>
+	<string name="wake">waking you with the news !</string>
+	<string name="open_weather_maps_app_id">40b8d59da93a28f196c940fd920c268c</string>
+</resources>

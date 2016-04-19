@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mycompany.wakeinnews"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    <uses-sdk 
+        android:minSdkVersion="8" 
+        android:targetSdkVersion="21" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.READ_CALENDAR"/>
+	<!-- permission required to use Alarm Manager -->
+	<uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+	<application
+	    android:allowBackup="true"
+	    android:icon="@drawable/lune"
+	    android:label="@string/app_name"
+	    android:theme="@style/AppTheme">
+	    <activity
+		android:name=".AlarmActivity"
+		android:label="@string/app_name">
+		<intent-filter>
+		    <action android:name="android.intent.action.MAIN" />
+
+		    <category android:name="android.intent.category.LAUNCHER" />
+		</intent-filter>
+	    </activity>
+		<activity
+			android:name=".WakeActivity"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+		</activity>
+	    <service
+		android:name=".AlarmService"
+		android:enabled="true" />
+	    <receiver android:name=".AlarmReceiver" />
+	</application>
+
+</manifest>
